@@ -690,7 +690,7 @@ body .form-control:focus{
 
 
 .about .content .read-more:hover {
-    background: rgba(var(--primary-color-rgb), 0.8);
+    background: #5b5b5b;
     padding-right: 19px;
 }
 
