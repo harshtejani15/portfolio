@@ -158,27 +158,40 @@ $(window).load(function(){
 
 
 
-// contact 
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // Prevent the form from submitting
-  
-  // Get form data
-  var formData = new FormData(this);
-  
-  // Send form data to server-side script (e.g., PHP)
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", "send_email.php"); // Replace "send_email.php" with your server-side script URL
-  xhr.onload = function() {
-      if (xhr.status === 200) {
-          alert("Email sent successfully!");
-          // Optionally, you can redirect the user to a thank you page or clear the form fields
-          // window.location.href = "thank_you.html";
-          // document.getElementById("contactForm").reset();
-      } else {
-          alert("Failed to send email. Please try again later.");
-      }
-  };
-  xhr.send(formData);
+
+
+
+
+/* paste this line in verbatim */
+window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+/* customize formbutton below*/     
+formbutton("create", {
+  action: "https://formspree.io/f/mvoeyeev",
+  title: "How can we help?",
+  fields: [
+    { 
+      type: "email", 
+      label: "Email:", 
+      name: "email",
+      required: true,
+      placeholder: "your@email.com"
+    },
+    {
+      type: "textarea",
+      label: "Message:",
+      name: "message",
+      placeholder: "What's on your mind?",
+    },
+    { type: "submit" }      
+  ],
+  styles: {
+    title: {
+      backgroundColor: "gray"
+    },
+    button: {
+      backgroundColor: "gray"
+    }
+  }
 });
 
-
+;
