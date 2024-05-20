@@ -1,4 +1,7 @@
-$(window).scroll(function() {
+
+
+
+(window).scroll(function() {
     if ($(this).scrollTop()) {
         $('#scroll-top').fadeIn();
     } else {
@@ -157,20 +160,30 @@ $(document).ready(function() {
     counter[i] = parseInt(counters[i].innerHTML);
   }
 
-  var count = function(start, value, id) {
+  var duration = 2000; 
+  var steps = []; 
+
+  for (i = 0; i < countersQuantity; i++) {
+    steps[i] = counter[i] / (duration / 10); 
+  }
+
+  var count = function(start, value, id, step) {
     var localStart = start;
-    setInterval(function() {
+    var interval = setInterval(function() {
       if (localStart < value) {
-        localStart++;
-        counters[id].innerHTML = localStart;
+        localStart += step;
+        counters[id].innerHTML = Math.ceil(localStart); 
+      } else {
+        clearInterval(interval);
       }
-    }, 40);
+    }, 10);
   }
 
   for (j = 0; j < countersQuantity; j++) {
-    count(0, counter[j], j);
+    count(0, counter[j], j, steps[j]); 
   }
 });
+
 
 
 // jss
@@ -183,40 +196,29 @@ $(window).load(function(){
 
 
 
+// function sendMail() {
+//   var params = {
+//     name: document.getElementById("name").value,
+//     email: document.getElementById("email").value,
+//     subject: document.getElementById("subject").value,
+//     message: document.getElementById("message").value,
+//   };
 
+//   const serviceID = "service_9dme6ap"; // Replace with your service ID
+//   const templateID = "template_x1f9qvj"; // Replace with your template ID
 
+//   emailjs.send(serviceID, templateID, params)
+//     .then((res) => {
+//       document.getElementById("name").value = "";
+//       document.getElementById("email").value = "";
+//       document.getElementById("subject").value = "";
+//       document.getElementById("message").value = "";
+//       console.log(res);
+//       alert("Success");
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       alert("An error occurred. Please try again later.");
+//     });
+// }
 
-
-/* paste this line in verbatim */
-window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
-/* customize formbutton below*/     
-formbutton("create", {
-  action: "https://formspree.io/f/mvoeyeev",
-  title: "How can we help?",
-  fields: [
-    { 
-      type: "email", 
-      label: "Email:", 
-      name: "email",
-      required: true,
-      placeholder: "your@email.com"
-    },
-    {
-      type: "textarea",
-      label: "Message:",
-      name: "message",
-      placeholder: "What's on your mind?",
-    },
-    { type: "submit" }      
-  ],
-  styles: {
-    title: {
-      backgroundColor: "gray"
-    },
-    button: {
-      backgroundColor: "gray"
-    }
-  }
-});
-
-;

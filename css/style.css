@@ -1637,6 +1637,11 @@ body .form-control:focus{
     height: 100%;
 }
 
+.sub-btn:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
 .contact .php-email-form input[type=text], .contact .php-email-form input[type=email], .contact .php-email-form textarea {
     font-size: 14px;
     padding: 10px 15px;
