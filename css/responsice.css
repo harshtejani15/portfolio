@@ -143,6 +143,9 @@
 	.pricing .featured {
 	    transform: scale(1);
 	}
+		.info-team:last-child{
+		margin-bottom: 20px;
+	}
 }
 
 @media (max-width:767px){
