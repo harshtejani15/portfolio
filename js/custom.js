@@ -211,3 +211,46 @@ $(window).load(function(){
 // });
 
 
+
+
+document.getElementById("myForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Collect form data
+  const formData = new FormData(this);
+
+  // Disable the submit button to prevent multiple submissions
+  const submitButton = document.getElementById("submitButton");
+  submitButton.disabled = true;
+
+  // Send form data to Web3Forms' endpoint
+  fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+  })
+  .then(response => {
+      if (!response.ok) {
+          throw new Error("Network response was not ok");
+      }
+      return response.json(); // Parse JSON response
+  })
+  .then(data => {
+      // Handle successful form submission
+      console.log(data); // Log the response from Web3Forms
+      // Show submit message
+      document.getElementById("submitMessage").style.display = "block";
+      // Hide submit button after successful submission
+      submitButton.style.display = "none";
+      // Re-enable the submit button
+      submitButton.disabled = false;
+      // Reset the form
+      document.getElementById("myForm").reset();
+  })
+  .catch(error => {
+      // Handle errors
+      console.error("Error:", error);
+      // You can update the UI or show an error message here
+      // Re-enable the submit button in case of error
+      submitButton.disabled = false;
+  });
+});
