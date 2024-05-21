@@ -134,14 +134,17 @@
 
 @media (max-width: 768px){
 	.hero-sec h2 {
-    	font-size: 32px;
+    	font-size: 22px;
 	}
 
 	.hero-sec p {
-	    font-size: 18px;
+	    font-size: 15px;
 	}
 	.pricing .featured {
 	    transform: scale(1);
+	}
+	.info-team:last-child{
+		margin-bottom: 20px;
 	}
 }
 
