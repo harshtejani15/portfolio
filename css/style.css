@@ -14,6 +14,10 @@
         --contrast-color: #ffffff;
         --contrast-color-rgb: 255, 255, 255;
     }
+    
+    html {
+        scroll-behavior: smooth;
+      }
 
 /*Default-CSS*/
 input[type="file"]::-webkit-file-upload-button {
@@ -747,6 +751,7 @@ body .form-control:focus{
     z-index: 1;
     padding: 120px 0;
     background-position-y: -345px;
+    background-repeat: no-repeat;
 }
 
 .stats:before {
@@ -816,11 +821,11 @@ body .form-control:focus{
 }
 
 .section-title h2:after {
-    margin: 0 0 10px 15px;
+    margin: 0 0 5px 15px;
 }
 
 .section-title h2:before {
-    margin: 0 15px 10px 0;
+    margin: 0 15px 5px 0;
 }
 
 .section-title h2:before, .section-title h2:after {
@@ -860,11 +865,11 @@ body .form-control:focus{
     position: relative;
 }
 
-.services .service-item .title a {
+.services .service-item .title {
     color: var(--secondary-color);
 }
 
-.services .service-item .title a:hover {
+.services .service-item .title:hover {
     color: var(--primary-color);
 }
 
@@ -911,19 +916,29 @@ body .form-control:focus{
     margin-top: 20%;
     position: relative;
     width: 100%;
+    transition: all 0.5s ease 0s;
     z-index: 2;
 }
 
-.stack-front:after, .stack-back:after{
+.features .features-item .image-stack .stack-front:hover,.features .features-item .image-stack .stack-back:hover,.features-img-bg .inner-fu-img:hover{
+    transform: scale(0.9);
+}
+
+
+.stack-front:after, .stack-back:after {
     content: "";
     background: #000;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0.3%;
+    bottom: 0%;
     opacity: 0;
     transition: all 0.5s ease 0s;
+}
+
+.stack-back:after{
+    bottom: 8% !important;
 }
 
 .features .features-item .image-stack .stack-front:hover.stack-front:after{
@@ -942,6 +957,7 @@ body .form-control:focus{
     z-index: 1;
     position: relative;
     height: 88%;
+    transition: all 0.5s ease 0s;
 }  
 
 .features .features-item .features-img-bg img {
@@ -951,6 +967,7 @@ body .form-control:focus{
 }
 .features-img-bg .inner-fu-img{
     position: relative;
+    transition: all 0.5s ease 0s;
 }
 
 .features .features-item .features-img-bg .inner-fu-img:after {
@@ -1398,7 +1415,7 @@ body .form-control:focus{
 /**/
 
 .call-to-action{
-    background: url('../images/cta-bg.jpg');
+    background: url('../images/vegetable-oil.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -1604,19 +1621,21 @@ body .form-control:focus{
 
 /* */
 
-.contact .info-team  {
-    background: rgba(33, 37, 41, 0.03);
+.contact .info-team {
+    background: var(--primary-color);
     padding: 30px;
+    border-radius: 10px;
 }
 
 .contact .info-team i {
     font-size: 38px;
     line-height: 0;
-    color:var(--primary-color);
+    color: #fff;
 }
 
 .contact .info-team h3 {
     font-size: 20px;
+    color: #fff;
     font-weight: 700;
     margin: 20px 0 10px 0;
 }
@@ -1626,6 +1645,7 @@ body .form-control:focus{
     line-height: 24px;
     font-size: 14px;
     margin-bottom: 0;
+    color: #fff;
 }
 
 

@@ -122,12 +122,10 @@ $('.testimonial').owlCarousel({
     });
   }
   window.addEventListener('load', initIsotopeLayout);
+
+
+
   
-
-
-
-
-
 
 
 
@@ -192,4 +190,24 @@ $(window).load(function(){
 		$(this).remove();
 	});
 });
+
+// $(document).ready(function() {
+//   // Function to show loader for 2 seconds
+//   function showLoader() {
+//       var loaderParent = $('<div class="cssloader-parent"><div class="cssloader"><div class="sh1"></div><div class="sh2"></div><h4 class="lt">loading</h4></div>    </div>'); // Create loader-parent element
+//       $('body').append(loaderParent); // Append loader-parent to body
+//       loaderParent.fadeIn(1000); // Fade in loader-parent
+//       setTimeout(function() {
+//           loaderParent.fadeOut(1000, function() {
+//               loaderParent.remove(); // Remove loader-parent after fading out
+//           });
+//       }, 100); // Show loader for 2 seconds
+//   }
+
+//   // Attach click event handler to trigger the showLoader function
+//   $(document).on('click', function() {
+//       showLoader(); // Show loader on click
+//   });
+// });
+
 
