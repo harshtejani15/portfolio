@@ -159,7 +159,7 @@ $(document).ready(function() {
     counter[i] = parseInt(counters[i].innerHTML);
   }
 
-  var duration = 2000; 
+  var duration = 5000; 
   var steps = []; 
 
   for (i = 0; i < countersQuantity; i++) {
@@ -171,7 +171,7 @@ $(document).ready(function() {
     var interval = setInterval(function() {
       if (localStart < value) {
         localStart += step;
-        counters[id].innerHTML = Math.ceil(localStart); 
+        counters[id].innerHTML = Math.ceil(localStart) + "+"; 
       } else {
         clearInterval(interval);
       }

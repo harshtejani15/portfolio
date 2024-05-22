@@ -212,7 +212,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
     transition: all 0.5s ease;
     border-radius: 5px;
 }
-.btn:hover, .btn:focus, button:hover, button:focus {
+.btn:hover, .btn:focus{
     background: var(--primary-color);
     transition: all 0.5s ease;
     color: #fff
@@ -620,6 +620,26 @@ body .form-control:focus{
     position: absolute;
     inset: 0;
     z-index: 0;
+}
+.oil-img{
+    animation-name: oil;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    mix-blend-mode: darken;
+}
+@keyframes oil {
+    0%{
+        transform: translateX(0px);
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateX(50px);
+        transform: translateY(50px);
+    }
+    100%{
+        transform: translateX(0px);
+        transform: translatey(0px);
+    }
 }
 .stats .stats-item span {
     font-size: 55px;
