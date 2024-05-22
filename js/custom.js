@@ -65,15 +65,16 @@ $('.testimonial').owlCarousel({
     dots:true,
     autoplay:true,
     autoplayTimeout:2000,
+    items:3,
     responsive:{
         0:{
             items:1
         },
         600:{
-            items:1
+            items:2
         },
         1000:{
-            items:1
+            items:2
         }
     }
 })

@@ -1260,13 +1260,18 @@ body .form-control:focus{
     width: 100%;
     max-width: 100%;
     padding: 30px;
+    min-height: 270px;
+    background-color: #edeeee;
 }
 .tetst-text .star{
     margin: 10px 0;
 }
-.tetst-text .star i{
+.testimonials .star i{
     color: #ffc107;
     margin: 0 1px;
+}
+.google-logo {
+    mix-blend-mode: darken;
 }
 .testimonial-bottom i{
     color: var(--primary-color);
@@ -1277,8 +1282,7 @@ body .form-control:focus{
     font-style: italic;
 }
 .testimonials .testimonial-slides{
-    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
-    background-color: #fff;
+
 }
 .testimonial-slides .owl-dots button span{
     height: 10px;
@@ -1289,7 +1293,6 @@ body .form-control:focus{
     margin-right: 5px;
 }
 .testimonial-slides .owl-dots{
-    background-color: #fff;
     padding: 20px;
     display: flex;
     justify-content: center;
