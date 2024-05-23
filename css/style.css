@@ -1444,7 +1444,6 @@ label.contact_label {
 .footer {
     font-size: 14px;
     padding-bottom: 50px;
-    opacity: 0.5;
     background: url(../images/footer.jpg);
     background-repeat: no-repeat;
     background-size: cover;
