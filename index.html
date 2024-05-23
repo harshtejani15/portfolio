@@ -288,7 +288,7 @@
 							<div class="text-center aos-animate aos-init" data-aos="fade-up" >
 								<h3>Call To Action</h3>
 								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-								<a href="#0" class="call-btn">Call To Action</a>
+								<a href="tel:+919898980453" class="call-btn">Call To Action</a>
 							</div>
 						</div>
 					</div>
@@ -355,7 +355,7 @@
 
                    <div class="container">
 
-                     <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+                     <div class="isotope-layout" data-default-filter=".filter-app" data-layout="masonry" data-sort="original-order">
 
                        <ul class="portfolio-filters isotope-filters aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
                          <li data-filter=".filter-app" class="filter-active">1 LITRE</li>
@@ -911,58 +911,34 @@
 		<p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
 	</div>
 	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-lg-6">
-				<div class="row gy-4">
-					<div class="col-md-6">
-						<div class="info-team">
-							<i class="fas fa-map-marker-alt"></i>
-							<h3>Address</h3>
-							<p>108, Dwarkesh Ind.,</p>
-							<p>Velenja, Surat</p>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="info-team">
-							<i class="fas fa-phone-alt"></i>
-							<h3>Call Us</h3>
-							<p>+91 98989 80453</p>
-							<p>+91 98989 80453</p>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="info-team">
-							<i class="far fa-envelope"></i>
-							<h3>Email Us</h3>
-							<p>powerselloil@gmail.com</p>
-							<p>info@powerselllubricant.com</p>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="info-team">
-							<i class="far fa-clock"></i>
-							<h3>Open Hours</h3>
-							<p>Monday - Friday</p>
-							<p>9:00AM - 05:00PM</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6">
+		<div class="row align-items-center">		
+			<div class="col-lg-7">
 				<form action="/index.html" method="POST" id="myForm">
 					<div class="row gy-4">
 						<input type="hidden" name="apikey" value="58b31b1f-357e-44db-af6e-c864f4e0613e">
-						<div class="col-lg-6">
-							<input type="text" name="name" id="name" placeholder="Your name" class="form-control" required>
+						<div class="col-lg-6 position-relative">
+							<label class="contact_label">Name</label>
+							<input type="text" name="name" id="name" class="form-control" required>
 						</div>
-						<div class="col-lg-6">
-							<input type="email" name="email" id="email" placeholder="Your Email" class="form-control" required>
+						<div class="col-lg-6 position-relative">
+							<label class="contact_label">Email</label>
+							<input type="email" name="email" id="email"class="form-control" required>
 						</div>
-						<div class="col-lg-12">
-							<input type="text" name="subject" id="subject" placeholder="subject" class="form-control" required>
+						<div class="col-lg-6 position-relative">
+							<label class="contact_label">Phone</label>
+							<input type="number" name="Phone" id="subject"class="form-control" required>
 						</div>
-						<div class="col-lg-12">
-							<textarea class="form-control" id="message" name="message" rows="5" placeholder="Message" required spellcheck="false"></textarea>
+						<div class="col-lg-6 position-relative">
+							<label class="contact_label">Pin Code</label>
+							<input type="number" name="Pincode" id="subject"class="form-control">
+						</div>
+						<div class="col-lg-12 position-relative">
+							<label class="contact_label">how did you hear about us</label>
+							<input type="text" id="Howdidyouhearaboutus" name="Howdidyouhearaboutus" class="form-control">
+						</div>
+						<div class="col-lg-12 position-relative">
+							<label class="contact_label">Message</label>
+							<textarea class="form-control" id="message" name="message" rows="5" required spellcheck="false"></textarea>
 						</div>
 						<div class="col-lg-12 text-center">
 								<button id="submitButton" type="submit" class="sub-btn">Send Message</button>
@@ -970,6 +946,9 @@
 					</div>
 				</form>
 				<div id="submitMessage" class="sub-suc" style="display: none;">Form submitted successfully!</div>
+			</div>
+			<div class="col-lg-5">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3719.589100624335!2d72.97664567526164!3d21.208475980486238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDEyJzMwLjUiTiA3MsKwNTgnNDUuMiJF!5e0!3m2!1sen!2sin!4v1716444846141!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 		</div>
 	</div>
@@ -1006,7 +985,6 @@
 				<h4>Contact Us</h4>
 				<p>108, Dwarkesh Ind.,</p>
 				<p>Velenja, Surat</p>
-				<p>United States</p>
 				<p class="mt-4">
 					<strong>Phone:</strong>
 					<span> +91 98989 80453</span>

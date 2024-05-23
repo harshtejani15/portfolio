@@ -97,19 +97,21 @@ $('.testimonial').owlCarousel({
   function initIsotopeLayout() {
     document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
       let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
-      let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
+      let filter = isotopeItem.getAttribute('data-default-filter') ?? 'filter-app';
       let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
-
+  
       let initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
         filter: filter,
         sortBy: sort
       });
-
+  
       isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
         filters.addEventListener('click', function() {
+          // Remove 'filter-active' class from previously clicked item
           isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
+          // Add 'filter-active' class to the currently clicked item
           this.classList.add('filter-active');
           initIsotope.arrange({
             filter: this.getAttribute('data-filter')
@@ -119,16 +121,10 @@ $('.testimonial').owlCarousel({
           }
         }, false);
       });
-
+  
     });
   }
   window.addEventListener('load', initIsotopeLayout);
-
-
-
-  
-
-
 
 // fixed header
     $(window).scroll(function() {

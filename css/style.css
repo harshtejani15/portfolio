@@ -18,6 +18,16 @@ html {
     scroll-behavior: smooth;
 }
 /*Default-CSS*/
+
+/* Hide the spin buttons for number input */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
 input[type="file"]::-webkit-file-upload-button {
     cursor: pointer;
 }
@@ -1395,6 +1405,16 @@ body .form-control:focus{
 .g-4, .gy-4 {
     --bs-gutter-y: 1.5rem;
 }
+
+label.contact_label {
+    position: absolute;
+    top: -12px;
+    left: 30px;
+    background-color: #fff;
+    padding: 0 4px;
+    color: #919191;
+}
+
 .contact .php-email-form{
     background: rgba(33, 37, 41, 0.03);
     padding: 30px;
@@ -1422,11 +1442,11 @@ body .form-control:focus{
 /* */
 /**/
 .footer {
-    --background-color: #f4f4f4;
     color: var(--default-color);
-    background-color: var(--background-color);
+    background-color:#000;
     font-size: 14px;
     padding-bottom: 50px;
+    opacity: 0.5;
 }
 .footer .footer-top {
     padding-top: 50px;
@@ -1445,23 +1465,27 @@ footer.footer .logo {
     font-size: 16px;
     height: 40px;
     width: 40px;
-    border: 1px solid rgba(36, 37, 41, 0.5);
+    border: 1px solid #fff;
     border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 10px;
-    color: rgba(var(--default-color-rgb), 0.5);
+    color: #fff;
+}
+.footer-about p,.footer .footer-links ul a,.footer .footer-contact p{
+    color: #fff;
 }
 .footer .social-links a:hover{
+    transform: translateY(20px);
     color: var(--primary-color);
-    border-color: var(--primary-color);
+    border:1px solid  var(--primary-color);
 }
 .footer .footer-links {
     margin-bottom: 30px;
 }
 .footer h4 {
-    color: var(--secondary-color);
+    color: #fff;
     font-size: 16px;
     font-weight: bold;
     position: relative;
@@ -1473,11 +1497,11 @@ footer.footer .logo {
     align-items: center;
 }
 .footer .footer-links ul a {
-    color: rgba(var(--default-color-rgb), 0.8);
     display: inline-block;
     line-height: 1;
 }
 .footer .footer-links ul li a:hover{
+    transform: translateX(15px);
     color: var(--primary-color);
 }
 .footer .footer-contact p {
