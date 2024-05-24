@@ -476,6 +476,10 @@ body .form-control:focus{
     outline: none !important;
     box-shadow: none;
 }
+.form-control:focus + .contact_label {
+    color: var(--primary-color); /
+}
+
 .hero-sec h2 {
     color: var(--contrast-color);
     margin: 0;
